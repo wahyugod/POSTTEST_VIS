@@ -29,7 +29,7 @@
                     predikat = "Kurang"
                 End If
 
-                lblIPK.Text = ipk.ToString("0.00")
+                txtIPK.Text = ipk.ToString("0.00")
                 lblPredikat.Text = predikat
                 lblSemester.Text = jumlahSemester.ToString()
 
@@ -50,7 +50,7 @@
         totalIPS = 0
         jumlahSemester = 0
 
-        lblIPK.Text = "0.00"
+        txtIPK.Text = "0.00"
         lblPredikat.Text = "-"
         lblSemester.Text = "0"
 
@@ -58,7 +58,7 @@
         txtIPS.Focus()
     End Sub
 
-    Private Sub txtIPS_KeyDown(sender As Object, e As KeyEventArgs) Handles txtIPS.KeyDown
+    Private Sub txtIPS_KeyDown(sender As Object, e As KeyEventArgs) Handles txtIPS.KeyDown, txtIPK.KeyDown
         If e.KeyCode = Keys.Enter Then
             btnTambah.PerformClick()
             e.SuppressKeyPress = True

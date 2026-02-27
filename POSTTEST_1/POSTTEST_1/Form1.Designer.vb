@@ -25,7 +25,6 @@ Partial Class Form1
         txtIPS = New TextBox()
         btnTambah = New Button()
         Label3 = New Label()
-        lblIPK = New Label()
         lblPredikat = New Label()
         Label4 = New Label()
         lblSemester = New Label()
@@ -33,6 +32,7 @@ Partial Class Form1
         Label1 = New Label()
         Label5 = New Label()
         Panel1 = New Panel()
+        txtIPK = New TextBox()
         SuspendLayout()
         ' 
         ' txtIPS
@@ -40,12 +40,12 @@ Partial Class Form1
         txtIPS.BackColor = Color.FromArgb(CByte(24), CByte(20), CByte(31))
         txtIPS.BorderStyle = BorderStyle.None
         txtIPS.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        txtIPS.ForeColor = Color.Silver
+        txtIPS.ForeColor = Color.White
         txtIPS.Location = New Point(159, 149)
         txtIPS.Name = "txtIPS"
+        txtIPS.PlaceholderText = "Masukan IP Semester..."
         txtIPS.Size = New Size(478, 28)
         txtIPS.TabIndex = 1
-        txtIPS.Text = "Masukan IP Semester..."
         ' 
         ' btnTambah
         ' 
@@ -72,23 +72,12 @@ Partial Class Form1
         Label3.TabIndex = 0
         Label3.Text = "IP Kumulatif (IPK) :"
         ' 
-        ' lblIPK
-        ' 
-        lblIPK.AutoSize = True
-        lblIPK.Font = New Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblIPK.ForeColor = Color.CornflowerBlue
-        lblIPK.Location = New Point(100, 368)
-        lblIPK.Name = "lblIPK"
-        lblIPK.Size = New Size(72, 37)
-        lblIPK.TabIndex = 0
-        lblIPK.Text = "0.00"
-        ' 
         ' lblPredikat
         ' 
         lblPredikat.AutoSize = True
         lblPredikat.Font = New Font("Segoe UI", 18.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblPredikat.ForeColor = Color.DarkViolet
-        lblPredikat.Location = New Point(282, 374)
+        lblPredikat.Location = New Point(279, 374)
         lblPredikat.Name = "lblPredikat"
         lblPredikat.Size = New Size(24, 32)
         lblPredikat.TabIndex = 0
@@ -110,7 +99,7 @@ Partial Class Form1
         lblSemester.AutoSize = True
         lblSemester.Font = New Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblSemester.ForeColor = Color.White
-        lblSemester.Location = New Point(604, 368)
+        lblSemester.Location = New Point(599, 368)
         lblSemester.Name = "lblSemester"
         lblSemester.Size = New Size(33, 37)
         lblSemester.TabIndex = 0
@@ -161,17 +150,30 @@ Partial Class Form1
         Panel1.Size = New Size(482, 32)
         Panel1.TabIndex = 3
         ' 
+        ' txtIPK
+        ' 
+        txtIPK.BackColor = Color.FromArgb(CByte(24), CByte(20), CByte(31))
+        txtIPK.BorderStyle = BorderStyle.None
+        txtIPK.Font = New Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        txtIPK.ForeColor = Color.CornflowerBlue
+        txtIPK.Location = New Point(102, 370)
+        txtIPK.Name = "txtIPK"
+        txtIPK.ReadOnly = True
+        txtIPK.Size = New Size(75, 36)
+        txtIPK.TabIndex = 1
+        txtIPK.Text = "0.00"
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(20), CByte(22), CByte(27))
         ClientSize = New Size(800, 450)
+        Controls.Add(txtIPK)
         Controls.Add(txtIPS)
         Controls.Add(Label1)
         Controls.Add(btnReset)
         Controls.Add(btnTambah)
-        Controls.Add(lblIPK)
         Controls.Add(lblPredikat)
         Controls.Add(lblSemester)
         Controls.Add(Label5)
@@ -179,14 +181,13 @@ Partial Class Form1
         Controls.Add(Label3)
         Controls.Add(Panel1)
         Name = "Form1"
-        Text = "Form1"
+        Text = "Kalkulator IP"
         ResumeLayout(False)
         PerformLayout()
     End Sub
     Friend WithEvents txtIPS As TextBox
     Friend WithEvents btnTambah As Button
     Friend WithEvents Label3 As Label
-    Friend WithEvents lblIPK As Label
     Friend WithEvents lblPredikat As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents lblSemester As Label
@@ -194,5 +195,6 @@ Partial Class Form1
     Friend WithEvents Label1 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents txtIPK As TextBox
 
 End Class
